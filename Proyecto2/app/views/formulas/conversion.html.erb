@@ -1,0 +1,33 @@
+<h1>Formulas#conversion</h1>
+<p>Find me in app/views/formulas/conversion.html.erb</p>
+<%= form_tag({controller: "formulas", action: "conversion"}, method: "post") do %>
+<%= label_tag(:n, "Nombre:") %>
+<%= text_field_tag(:n) %>
+<br>
+<%= label_tag(:e, "Edad:") %>
+<%= text_field_tag(:e) %>
+<br>
+Preferencias
+<br>
+<%= check_box_tag('pasatiempo[]','leer') %>
+<%= label_tag('pasatiempo[]','Leer') %>
+<br>
+<%= check_box_tag('pasatiempo[]','escuchar_musica') %>
+<%= label_tag('pasatiempo[]','Escuchar musica') %>
+<br>
+<%= check_box_tag('pasatiempo[]','soccer') %>
+<%= label_tag('pasatiempo[]', "Soccer") %>
+<br>
+<%= check_box_tag('pasatiempo[]','gym') %>
+<%= label_tag('pasatiempo[]', "Gym") %>
+<br>
+Genero
+<br>
+<%= radio_button_tag(:genero, "masculino") %>
+<%= label_tag(:masculino, "Masculino") %>
+<br>
+<%= radio_button_tag(:genero, "femenino") %>
+<%= label_tag(:femenino, "Femenino") %>
+<br>
+<%= submit_tag("aceptar") %>
+<% end %>
